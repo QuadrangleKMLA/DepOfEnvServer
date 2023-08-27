@@ -90,7 +90,8 @@ public class WebSecurityConfig {
                 .requestMatchers(HttpMethod.POST, "/api/auth/logout").permitAll()
                 .requestMatchers(HttpMethod.POST, "/api/auth/refreshToken").permitAll()
                 .requestMatchers(HttpMethod.GET, "/api/management/**").permitAll()
-                .requestMatchers(HttpMethod.PUT, "/api/management/**").authenticated()
+                .requestMatchers(HttpMethod.PUT, "/api/management/daily/**").authenticated()
+                .requestMatchers(HttpMethod.PUT, "/api/management/evaluate").permitAll()
                 .anyRequest().authenticated()
         );
         http.authenticationProvider(authenticationProvider());

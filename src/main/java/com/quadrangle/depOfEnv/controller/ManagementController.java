@@ -52,7 +52,7 @@ public class ManagementController {
     }
 
     @PutMapping("/daily/{roomNumber}/{trashType}")
-    public ResponseEntity<?> updateDaily(@PathVariable(value = "roomNumber") Integer roomNumber, @PathVariable(value = "trashType") String trashType) throws ParseException {
+    public ResponseEntity<?> updateDaily(@PathVariable(value = "roomNumber") Integer roomNumber, @PathVariable(value = "trashType") String trashType) {
         String roomID = "ROOM_NUMBER_" + roomNumber;
 
         Daily daily = dailyRepository.findByRoomNumber(Enum.valueOf(ERoomNumber.class, roomID)).orElseThrow(() -> new ResourceNotFoundException("Room with number: " + roomNumber + " not found."));
