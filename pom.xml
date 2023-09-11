@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.quadrangle</groupId>
 	<artifactId>depOfEnv</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0-FINAL</version>
 	<name>depOfEnv</name>
 	<description>Department of environment KMLA</description>
 	<properties>
