@@ -14,10 +14,10 @@ services:
       - db_data:/var/lib/mysql
 
   web:
-    image: dep-of-env-kmla:backend-v0.0.1
+    image: dep-of-env-kmla:backend-v1.0.0
     build:
       context: ..
-      dockerfile: Dockerfile
+      dockerfile: ./depofenvkmla_server/Dockerfile
     ports:
       - "8080:8080"
     depends_on:
